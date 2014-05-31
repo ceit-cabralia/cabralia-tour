@@ -13,7 +13,7 @@ Include `cross_browser.css` if you want your webapp can run on any modern browse
 Please test your app in your target browsers, as "style" folder is pulled automatically from the original source, if some styles changes before we have the change to update this file, we cannot guarantee it will always work as expected.
 
 
-Install
+Installl
 ---------
 
 1. You can git clone the code from github `https://github.com/ceit-cabralia/cabralia-tour.git`
