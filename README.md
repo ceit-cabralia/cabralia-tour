@@ -1,9 +1,9 @@
 Cabrália Tour
 ==============
 
-Informações turísticas de Santa Cruz de Cabrália-BA
+Informações turísticas de Santa Cruz Cabrália-BA
 
-App desenvolido pelo CEIT-PR3G de Santa Cruz de Cabrália, sob orientação e supervisão da equipe de desenvolvimento da Telefônica/Vivo e da Editacuja.
+App desenvolido pelo CEIT-PR3G de Santa Cruz Cabrália, sob orientação e supervisão da equipe de desenvolvimento da Telefônica/Vivo e da Editacuja.
 
 Projeto desenvolvido para o plataforma Mozilla Firefox OS, utilizando os componentes Building Blocks[buildingfirefoxos.com](http://www.buildingfirefoxos.com).
 
