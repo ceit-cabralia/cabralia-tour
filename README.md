@@ -5,7 +5,7 @@ Informações turísticas de Santa Cruz Cabrália-BA
 
 App desenvolvido pelo CEIT-PR3G de Santa Cruz Cabrália, sob orientação e supervisão da equipe de desenvolvimento da Telefônica/Vivo e da Editacuja.
 
-Projeto desenvolvido para o plataforma Mozilla Firefox OS, utilizando os componentes Building Blocks[buildingfirefoxos.com](http://www.buildingfirefoxos.com).
+Projeto desenvolvido para o plataforma Mozilla Firefox OS, utilizando os componentes Building Blocks [buildingfirefoxos.com](http://www.buildingfirefoxos.com).
 
 Cross browser support
 -----------------------
@@ -24,5 +24,5 @@ Install
 Contato
 ---------
 
-Esse repositório é mantido por [@rwupsbr](https://github.com/wupsbr). 
+Esse repositório é mantido por [@wupsbr](https://github.com/wupsbr). 
 
