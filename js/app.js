@@ -1,3 +1,5 @@
+
+
 // chamada da opção Hospedagens
 document.querySelector('#btn-hospedagem').addEventListener('click', function () {
     document.querySelector('#list-hospedagem').className = 'current';
@@ -41,3 +43,5 @@ document.querySelector('#btn-buttons-back3').addEventListener('click', function 
     document.querySelector('#list-transportes').className = 'right';
     document.querySelector('[data-position="current"]').className = 'current';
 });
+
+
