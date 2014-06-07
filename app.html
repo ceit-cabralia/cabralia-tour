@@ -6,6 +6,10 @@
     <!-- deixando o App responsivo -->
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 
+    <!-- Additional markup to make Building Blocks kind of cross browser -->
+    <link rel="stylesheet" href="cross_browser.css">
+    <link rel="stylesheet" href="style/cross_browser.css">
+
     <!-- importando componentes do Building blocks -->
     <link rel="stylesheet" href="style/buttons.css">
     <link rel="stylesheet" href="style/confirm.css">
@@ -23,9 +27,6 @@
 
     <title>Cabrália Tour</title>
 
-    <!-- Additional markup to make Building Blocks kind of cross browser -->
-    <link rel="stylesheet" href="cross_browser.css">
-
     <script src="js/libs/handlebars-v1.3.0.js"></script>
     <script src="js/libs/qwest-0.5.5.min.js"></script>
 </head>
@@ -34,342 +35,41 @@
     <div id="loader" class="loader hide"></div>
 
     <!-- criando o menu principal -->
-    <section id="menu-principal" role="region">
+    <section id="menu-principal" role="region" data-position="current">
         <header class="fixed">
             <h1>Cabrália Tour <em>Beta</em></h1>
         </header>
 
         <article class="scrollable header">
             <div data-type="list">
-                <ul id="menu-list">
-                </ul>
+                <ul id="menu-list"></ul>
             </div>
         </article>
     </section>
     <!-- Final de menu -->
 
 
-    <!--- Criando lista de Hospedagens-->
-    <section role="region" id="list-hospedagem" data-position="right">
+    <!--- Criando lista de itens -->
+    <section role="region" id="list-item-page" data-position="right">
         <header class="fixed">
-            <a id="btn-buttons-back" href="#"><span class="icon icon-back">back</span></a>
-            <h1>Lista de hospedagens</h1>
+            <a id="btn-buttons-back" class="go-back" href="#">
+              <span class="icon icon-back">back</span>
+            </a>
+            <h1 id="item-list-title"></h1>
         </header>
+
         <article class="content scrollable header">
             <section data-type="list">
-                <ul id="qualquer-id">
-                  </ul>
+                <ul id="item-list"></ul>
             </section>
         </article>
     </section>
-    <!-- Final da lista de hospedagens-->
-
-
-    <!-- Criando a lista de restaurantes -->
-
-    <section role="region" id="list-restaurantes" data-position="right">
-        <header class="fixed">
-            <a id="btn-buttons-back1" href="#"><span class="icon icon-back">back</span></a>
-            <h1>Lista de Restaurantes</h1>
-        </header>
-        <article class="content scrollable header">
-            <section data-type="list">
-                <ul>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo11-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Restaurante Cabrália</p>
-                            <p>73-0001-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo12-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Restaurante Bagdá</p>
-                            <p>73-0002-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo13-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Restaurante da Areia</p>
-                            <p>73-0003-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo14-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Restaurante Mata Medonha</p>
-                            <p>73-0004-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo15-0.jpg">/
-                        </aside>
-                        <a href="#">
-                            <p>Restaurante CEIT</p>
-                            <p>73-0005-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo16-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Cantina Costa</p>
-                            <p>73-0006-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo17-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Cantina Cabrália</p>
-                            <p>73-0007-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo18-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Cantina Bagdá</p>
-                            <p>73-0008-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo19-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Cantina Bixão</p>
-                            <p>73-0009-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo20-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Cantina Pyton</p>
-                            <p>73-0010-9999</p>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-        </article>
-    </section>
-    <!-- Final da lista de restaurantes -->
-
-
-    <!-- Criando a lista de pontos turisticos -->
-
-    <section role="region" id="list-pontosturisticos" data-position="right">
-        <header class="fixed">
-            <a id="btn-buttons-back2" href="#"><span class="icon icon-back">back</span></a>
-            <h1>Pontos Turisticos</h1>
-        </header>
-        <article class="content scrollable header">
-            <section data-type="list">
-                <ul>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo1-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Praia de Santo André</p>
-                            <p>73-0001-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo2-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Praia de Santo Antonio</p>
-                            <p>73-0002-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo3-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Guaiu</p>
-                            <p>73-0003-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo4-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Ai que lindo</p>
-                            <p>73-0004-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo5-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Centro Historico</p>
-                            <p>73-0005-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo6-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Estatua de Santo Antonio</p>
-                            <p>73-0006-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo7-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Cidade Alta</p>
-                            <p>73-0007-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo8-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Praia de Cabrália</p>
-                            <p>73-0008-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo9-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>CEIT</p>
-                            <p>73-0009-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo10-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Floresta</p>
-                            <p>73-0010-9999</p>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-        </article>
-    </section>
-    <!-- Final da lista de Pontos Turisticos -->
-
-    <!-- Criando a lista de Transportes -->
-    <section role="region" id="list-transportes" data-position="right">
-        <header class="fixed">
-            <a class="btn-buttons" data-back="#list-transportes" href="#"><span class="icon icon-back">back</span></a>
-            <h1>Transportes</h1>
-        </header>
-        <article class="content scrollable header">
-            <section data-type="list">
-                <ul>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/robocop.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Robocop - Taxi</p>
-                            <p>NVA-4234 - Tel 73-0000-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/thor.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Thor - Taxi</p>
-                            <p>NVB-1235 - Tel 73-1111-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/chapolin.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Chapolin Colorado - Taxi</p>
-                            <p>NVC-7236 - Tel 73-2222-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/hulk.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Incrível Hulk - Taxi</p>
-                            <p>NCC-1237 - Tel 73-3333-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/aranha.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Homem Aranha - Taxi</p>
-                            <p>NGG-6238 - Tel 73-4444-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/batman.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Batman - Taxi</p>
-                            <p>WGL-4239 - Tel 73-5555-9999</p>
-                        </a>
-                    </li>
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/stark.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Tony Stark - Taxi</p>
-                            <p>NTS-3200 - Tel 73-6666-9999</p>
-                        </a>
-                    </li>
-
-                    <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/popeye.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Marinheiro Popeye - Taxi</p>
-                            <p>NVW-1255 =Tel 73-7777-9999</p>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-        </article>
-    </section>
-    <!-- Final da lista de Transportes -->
+    <!-- Final da lista de itens -->
 
     <!-- Templates -->
     <script id="menu-list-template" type="text/x-handlebars-template">
       {{#each categoria}}
-      <li>
+      <li class="menu-item" data-categoria="{{ categoria }}" data-title="{{ nome }}">
           <a id="btn-{{ categoria }}" href="#">
               <p>{{ nome }}</p>
           </a>
@@ -377,16 +77,18 @@
       {{/each}}
     </script>
 
-    <script id="qualquer-id-template" type="text/x-handlebars-template">
-       <li>
-                        <aside class="pack-end">
-                            <img alt="photo" src="images/photo1-0.jpg">
-                        </aside>
-                        <a href="#">
-                            <p>Hotel Cabrália</p>
-                            <p>73-0001-9999</p>
-                        </a>
-                    </li>
+    <script id="item-list-template" type="text/x-handlebars-template">
+      {{#each itens}}
+       <li class="item-list" data-id="{{ _id }}">
+          <aside class="pack-end">
+              <img alt="{{ name }}" src="{{ imagem }}">
+          </aside>
+          <a href="#">
+              <p>{{ nome }}</p>
+              <p>{{ telefone }}</p>
+          </a>
+      </li>
+      {{/each}}
     </script>
 
     <!-- chamadas para os JavaScrip -->
