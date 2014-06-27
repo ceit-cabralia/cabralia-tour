@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Building Blocks app</title>
-  <script>
-    // Trun it to false to always install 'normal' package
-    var supportHIDPI = false;
-    var isFFOS = ("mozApps" in navigator && navigator.userAgent.search("Mobile") != -1);
 
-    if ( isFFOS ) {
-      var manifestUrl = 'http://buildingfirefoxos.github.io/Building-Blocks/package/package.manifest';
-      var req = navigator.mozApps.installPackage(manifestUrl);
-      req.onsuccess = function() {
-        console.log(this.result.origin);
-      };
-      req.onerror = function() {
-        console.log(this.error.name);
-      };
+    <head>
+   <meta charset="utf-8">
+   <!-- deixando o App responsivo -->
+   <meta name="viewport" content="width=device-width, user-scalable=no" />
+     <link rel="stylesheet" href="html/style/estilo.css">
+   
+  
+    </head> <body>
+ 
 
-    } else {
-      window.location.href = "app.html"
-    }
+    
+    
+    
+    
+<div id="all">
 
-  </script>
-</head>
-<body>
-</body>
-</html>
+<a href=""><div id="btn-sobre" class="index-menu"><img src="images/cabraliaIcon.png"> </div></a>
+    
+<a href="html/Pontos-tour.html"><div id="btn-pontosturisticos" class="index-menu"> <img src="images/PontosTuristicosIcon.png">  </div></a>
+    
+<a href="html/Hospedagens.html"> <div id="btn-hospedagem" class="index-menu">   <img src="images/hospedagemIcon.png"> </div></a>
+    
+<a href="html/Restaurantes.html"><div id="btn-restaurantes" class="index-menu"> <img src="images/RestaurantesIcon.png">          </div></a>
+    
+<a href="html/Transporte.html"><div id="btn-transportes" class="index-menu"> <img src="images/transportationIcon.png">             </div></a>
+    
+<a><div id="btn-utilidadepublica" class="index-menu"> <img src="images/serviciosIcon.png"> </div></a>
+    
+<h3 id="txponto"> PONTOS</h3> 
+<h3 id="txpontot">TURISTICOS</h3> 
+<h3 id="txcabralia">CABRALIA</h3> 
+<h3 id="txhospedagem">HOSPEDAGEM </h3> 
+<h3 id="txtransporte">TRANSPORTE </h3> 
+<h3 id="txrestaurante">RESTAURANTE</h3>
+<h3 id="txservicos">SERVIÇOS</h3>
+</div>
+    </body></html>

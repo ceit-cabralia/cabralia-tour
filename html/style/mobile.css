@@ -1,0 +1,112 @@
+body
+
+{
+
+ 
+   
+    color: rgba(0,0,0,1);
+  
+
+}
+
+
+img
+{
+
+position: absolute;
+top: 9px;
+width: 15px;
+left: 4px;
+position: fixed;
+}
+
+
+img#tempo
+{
+
+position: absolute;
+top: 3px;
+width: 45px;
+left: 85%;
+position: fixed;
+}
+
+
+
+h2
+{
+font-family: Arial,sans-serif;
+color: white;
+position: absolute;
+top: -11px;
+height:24px; 
+width: 200px;
+left: 53px;
+position: fixed;
+}
+
+div#f
+{
+background:linear-gradient(to bottom, rgba(205,103,35,1) 29%,rgba(187,72,45,1) 66%);;
+position: absolute;
+top:0%;
+width: 22px;
+height:50px;
+left: 0%;
+border-right: solid 1px rgba(255, 255, 255, 0.67);
+position: fixed;
+}
+div#filtro
+{
+background:linear-gradient(to bottom, rgba(205,103,35,1) 29%,rgba(187,72,45,1) 66%);;
+position: absolute;
+top:0%;
+width: 80px;
+height:50px;
+left: 85%;
+border-left: solid 1px rgba(255, 255, 255, 0.67);
+position: fixed;
+}
+
+div#f:hover
+{
+background: rgba(0, 0, 0, 0.57);
+    
+}
+
+div#filtro:hover
+{
+background: rgba(0, 0, 0, 0.57);
+    
+}
+
+
+div#h
+{
+background:linear-gradient(to bottom, rgba(205,103,35,1) 29%,rgba(187,72,45,1) 66%);
+position: absolute;
+top:0%;
+width: 100%;
+height:50px;
+left: 0%;
+box-shadow:1px 1px 6px  -1px black;
+padding: 1px;
+position: fixed;
+}
+
+img#foto
+{
+
+position: absolute;
+top:70px;
+height:160px;
+width: 226px;
+left: 25px;
+box-shadow:1px -3px 2px  -1px black;
+
+}
+p
+{
+color: black;
+}
+

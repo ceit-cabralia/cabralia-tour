@@ -1,15 +1,15 @@
 {
-  "name": "Cabrália Tour",
-  "description": "Informações turisticas de Cabrília App",
-  "launch_path": "/app.html",
+  "name": "App",
+  "description": "Building Blocks Demo App",
+  "launch_path": "/index.html",
   "icons": {
     "60": "/images/app_icon_60.png",
     "128": "/images/app_icon_128.png"
   },
-  "version": "1.0",
+  "version": "1.2",
   "developer": {
-    "name": "CEIT-PR3G",
-    "url": "http://www.tetceit.blogspot.com"
+    "name": "Almir Stark",
+    "url": "http://buildingfirefoxos.com"
   },
-  "default_locale": "pt-br"
+  "default_locale": "en"
 }
