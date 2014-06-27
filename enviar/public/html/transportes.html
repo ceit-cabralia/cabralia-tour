@@ -1,0 +1,44 @@
+<! DOCTYPE html>
+<html>
+
+    <head>
+   <meta charset="utf-8">
+   <!-- deixando o App responsivo -->
+   <meta name="viewport" content="width=device-width, user-scalable=no" />
+     <link rel="stylesheet" href="estilos/transportes.css">
+    </head>
+    <body>
+    <figure id="img-home" class="imghome"><img src="../img/imghome.jpg"></figure>
+
+<ul id="lst-cadastro" class="lst-cadastro">
+<a id="menu-home" class="menu" href="../index.html"><li>☼</li></a>
+
+<a id="menu-pontosturisticos" class="menu" href="pontosturisticos.html"><li>Pontos Turísticos    </li></a>
+
+<a id="menu-hospedagem" class="menu" href="hospedagem.html"><li>Hospedagem</li></a>
+
+<a id="menu-restaurantes" class="menu" href="restaurantes.html"><li>Restaurantes</li></a>
+
+<a id="menu-transportes" class="menu" href="#"><li>Transportes</li></a>
+
+<a id="menu-utilidadepublica" class="menu" href="utilidadepublica.html"><li>Utilidade Publica</li></a>
+
+                                                                            </ul>
+
+   <form class"form-class" method="post">
+ <fieldset id="fs-t"><legend>Informações Gerais</legend>
+    <fieldset id="tipotransportes"><legend>Tipo:</legend>
+    <input type="radio" checked name="btnradio" id="opc-taxi"/> Taxi
+    <input type="radio" name="btnradio" id="opc-transportepublico"/> Transportes Publicos
+
+</fieldset>
+    <label for="t-nome"> <p>Nome:<input type="text" required name="tnome" id="t-nome" placeholder="nome do taxi/transporte" size="150"/></label></p>
+      <label for="t-textarea"> <p>Descrição:</label></p>
+ <textarea id="t-textarea" required placeholder="Escreve uma descriçao breve de 300 caracteres aqui." maxlength="300"></textarea>
+           <input id="btncadastrar-transportes" type="button"  value="Cadastrar">
+   <input id="btn-cancelar" type="reset" value="Cancelar">
+</fildset>
+
+
+        </form>
+    </body>
