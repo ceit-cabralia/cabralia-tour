@@ -1,16 +1,29 @@
 //Url padrão da nossa api
-var apiUrl = 'http://cabralia.herokuapp.com/api/';
-
+//var apiUrl = 'http://cabralia.herokuapp.com/api/item/';
+//var apiUrl = 'http://hayoapi.herokuapp.com/';
+var apiUrl ='http://hayoapi.herokuapp.com/';
 //Funções da aplicação
 var app = {
   init: function () {
+    // chama a tela de listagem, fazendo a transição 
+    //alert("Chamou ou INIT")
+
+    document.getElementById('menu-principal').className = 'current';
+    document.querySelector('[data-position="current"]').className = 'right';
+
+
+
+    //alert("Chamou a transição de tela")
+
     //iniciamos o loader
     helpers.loader.show();
 
     //Iniciamos o request para a nossa api
-    qwest.get(apiUrl + 'categoria')
+    qwest.get(apiUrl)
       .success(function (response) {
-        helpers.getTemplate('menu-list-template', { categoria: response }, 'menu-list');
+        helpers.getTemplate('menu-list-template', {
+          categoria: response
+        }, 'menu-list');
       })
       .error(function (message) {
         //tratamos o erro
@@ -26,23 +39,23 @@ var app = {
 var helpers = {
   getTemplate: function (template, data, destination) {
     var source = document.getElementById(template).innerHTML,
-         temp  = Handlebars.compile(source);
+      temp = Handlebars.compile(source);
 
     var content = temp(data),
-        dest    = document.getElementById(destination);
+      dest = document.getElementById(destination);
 
     dest.innerHTML = content;
 
     //Adicionamos click nos itens do menu
     var menuLinks = document.querySelectorAll('.menu-item');
-    for (var i = 0, l = menuLinks.length; i < l; i ++) {
+    for (var i = 0, l = menuLinks.length; i < l; i++) {
       var item = menuLinks[i];
       item.addEventListener('click', helpers.goTo);
     }
 
     //Adicionamos click nos botões voltar
     var back = document.querySelectorAll('.go-back');
-    for (var i = 0, l = back.length; i < l; i ++) {
+    for (var i = 0, l = back.length; i < l; i++) {
       var item = back[i];
       item.addEventListener('click', helpers.goBack);
     }
@@ -50,7 +63,7 @@ var helpers = {
   },
   goTo: function (e) {
     var categoria = this.getAttribute('data-categoria'),
-        title     = this.getAttribute('data-title');
+      title = this.getAttribute('data-title');
 
     //Inserimos o novo titulo na pagina de listas
     helpers.setTitle(title);
@@ -59,9 +72,11 @@ var helpers = {
     helpers.loader.show();
 
     //Fazemos o get da url de itens passando a categoria
-    qwest.get(apiUrl + 'item/categoria/' + categoria)
+    qwest.get(apiUrl + categoria)
       .success(function (response) {
-        helpers.getTemplate('item-list-template', { itens: response }, 'item-list');
+        helpers.getTemplate('item-list-template', {
+          itens: response
+        }, 'item-list');
 
         document.getElementById('list-item-page').className = 'current';
         document.querySelector('[data-position="current"]').className = 'left';
@@ -94,6 +109,4 @@ var helpers = {
   }
 };
 
-
-//Iniciamos o app
 app.init();

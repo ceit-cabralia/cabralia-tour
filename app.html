@@ -2,22 +2,29 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <!-- deixando o App responsivo -->
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta charset="utf-8">
+  <!-- deixando o App responsivo -->
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-    <!-- Additional markup to make Building Blocks kind of cross browser -->
-    <link rel="stylesheet" href="cross_browser.css">
-    <link rel="stylesheet" href="style/cross_browser.css">
+  <!-- Additional markup to make Building Blocks kind of cross browser -->
+  <link rel="stylesheet" href="cross_browser.css">
+  <link rel="stylesheet" href="style/cross_browser.css">
 
-    <!-- importando componentes do Building blocks -->
-    <link rel="stylesheet" href="style/buttons.css">
-    <link rel="stylesheet" href="style/confirm.css">
-    <link rel="stylesheet" href="style/headers.css">
-    <link rel="stylesheet" href="style/drawer.css">
-    <link rel="stylesheet" href="style/lists.css">
-    <link rel="stylesheet" href="style/scrolling.css">
-    <link rel="stylesheet" href="style/icons.css">
+  <!-- importando componentes do Building blocks -->
+  <link rel="stylesheet" href="style/buttons.css">
+  <link rel="stylesheet" href="style/confirm.css">
+  <link rel="stylesheet" href="style/headers.css">
+  <link rel="stylesheet" href="style/drawer.css">
+  <link rel="stylesheet" href="style/lists.css">
+  <link rel="stylesheet" href="style/scrolling.css">
+  <link rel="stylesheet" href="style/icons.css">
+
+
+  <!-- CSS criados pelo Almir Stark -->
+  <ink rel="stylesheet" href="style/detalhe.css">
+    <link rel="stylesheet" href="style/Haio.css">
+    <link rel="stylesheet" href="style/liststyle.css">
+    <!--<link rel="stylesheet" href="style/mobile.css">-->
 
     <!-- Transitions -->
     <link rel="stylesheet" href="transitions.css">
@@ -25,74 +32,109 @@
     <!-- Util CSS: some extra tricks -->
     <link rel="stylesheet" href="util.css">
 
-    <title>Cabrália Tour</title>
+    <title>Hayô Tour</title>
 
     <script src="js/libs/handlebars-v1.3.0.js"></script>
     <script src="js/libs/qwest-0.5.5.min.js"></script>
 </head>
 
 <body role="application">
-    <div id="loader" class="loader hide"></div>
+  <div id="loader" class="loader hide"></div>
 
-    <!-- criando o menu principal -->
-    <section id="menu-principal" role="region" data-position="current">
-        <header class="fixed">
-            <h1>Cabrália Tour <em>Beta</em></h1>
-        </header>
+  <!-- SESSÃO Menu Principal -->
+  <section style="background-image: url(images/fondoMenuPrincipal.png)" id="menu-principal" role="region" data-position="current">
+    <div id="btnsobre" class="menu-item" data-categoria="sobre" data-title="Sobre Cabrália">
+      <img id="btn-sobre" src="images/cabraliaIcon.png">
+    </div>
+    <div id="btnpontosturisticos" class="menu-item" data-categoria="pontos/" data-title="Pontos">
+      <img id="btn-pontosturisticos" src="images/puntosTuristicos@2x.png">
+    </div>
+    <div id="btnhospedagem" class="menu-item" data-categoria="hosp/" data-title="Hospedagens">
+      <img id="btn-hospedagem" src="images/hospedagemIcon.png">
+    </div>
+    <div id="btnrestaurantes" class="menu-item" data-categoria="resta/" data-title="Restaurantes">
+      <img id="btn-restaurantes" src="images/restaurante@2x.png">
+    </div>
+    <div id="btntransportes" class="menu-item" data-categoria="transp/" data-title="Transportes">
+      <img id="btn-transportes" src="images/transporte@2x.png">
+    </div>
+    <div id="btnutilidadepublica" class="menu-item" data-categoria="util/" data-title="Utiidade Pública">
+      <img id="btn-utilidadepublica" src="images/hospital@2x.png">
+    </div>
+    <h3 id="txponto"> Pontos</h3>
+    <h3 id="txpontot">Turísticos</h3>
+    <h3 id="txcabralia">Cabrália</h3>
+    <h3 id="txhospedagem">Hospedagens</h3>
+    <h3 id="txtransporte">Transportes</h3>
+    <h3 id="txrestaurante">Restaurantes</h3>
+    <h3 id="txservicos">Serviços</h3>
+  </section>
+  <!-- final do menu principal -->
 
-        <article class="scrollable header">
-            <div data-type="list">
-                <ul id="menu-list"></ul>
-            </div>
-        </article>
-    </section>
-    <!-- Final de menu -->
+  <!-- criando o menu principal -->
+  <section id="menu-principal" role="region" data-position="right">
+    <header class="fixed">
+      <h1>Hayô Tour <em>Beta</em></h1>
+      <a id="btn-buttons-back" class="go-back" href="#">
+        <span class="icon icon-back">back</span>
+      </a>
+    </header>
+
+    <article class="scrollable header">
+      <div data-type="list">
+        <ul id="menu-list"></ul>
+      </div>
+    </article>
+  </section>
+  <!-- Final de menu -->
 
 
-    <!--- Criando lista de itens -->
-    <section role="region" id="list-item-page" data-position="right">
-        <header class="fixed">
-            <a id="btn-buttons-back" class="go-back" href="#">
-              <span class="icon icon-back">back</span>
-            </a>
-            <h1 id="item-list-title"></h1>
-        </header>
+  <!--- Criando lista de itens -->
+  <section role="region" id="list-item-page" data-position="right">
+    <header class="fixed">
+      <a id="btn-buttons-back" class="go-back" href="#">
+        <span class="icon icon-back">back</span>
+      </a>
+      <h1 id="item-list-title"></h1>
+    </header>
 
-        <article class="content scrollable header">
-            <section data-type="list">
-                <ul id="item-list"></ul>
-            </section>
-        </article>
-    </section>
-    <!-- Final da lista de itens -->
+    <article class="content scrollable header">
+      <section data-type="list">
+        <ul id="item-list"></ul>
+      </section>
+    </article>
+  </section>
+  <!-- Final da lista de itens -->
 
-    <!-- Templates -->
-    <script id="menu-list-template" type="text/x-handlebars-template">
-      {{#each categoria}}
-      <li class="menu-item" data-categoria="{{ categoria }}" data-title="{{ nome }}">
-          <a id="btn-{{ categoria }}" href="#">
-              <p>{{ nome }}</p>
-          </a>
+  <!-- Templates -->
+  <script id="menu-list-template" type="text/x-handlebars-template">
+    {{#each pontos}}
+    <li class = "menu-item" data-categoria = "{{ categoria }}"
+    data-title = "{{ nome }}" >
+      <a id = "btn-{{ categoria }}"
+    href = "#" >
+      <p > {{nome}} </p>
+          </a >
       </li>
-      {{/each}}
-    </script>
+      {{/each }}
+  </script>
 
-    <script id="item-list-template" type="text/x-handlebars-template">
-      {{#each itens}}
-       <li class="item-list" data-id="{{ _id }}">
-          <aside class="pack-end">
-              <img alt="{{ name }}" src="{{ imagem }}">
-          </aside>
+  <script id="item-list-template" type="text/x-handlebars-template">
+    {{#each itens}}
+    <li class = "item-list" data-id = "{{ _id }}" >
+      <aside class = "pack-end" >
+      <img alt = "{{ name }}" src = "{{ imagens }}" >
+      </aside>
           <a href="#">
-              <p>{{ nome }}</p>
-              <p>{{ telefone }}</p>
+              <p>{{ nome }}</p >
+      <p > {{telefone}} </p>
           </a>
       </li>
       {{/each}}
-    </script>
+  </script>
 
-    <!-- chamadas para os JavaScrip -->
-    <script defer src="js/app.js"></script>
+  <!-- chamadas para os JavaScrip -->
+  <script defer src="js/app.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,347 @@
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300);
+
+img#detalhe
+{
+position:fixed;
+top: 0px;
+width: 100%;
+height: 51%;
+left: 0px;
+}
+
+form#texto
+{
+padding: 2px;
+font-family: Arial,Fira San;
+font-size: 25px;
+position:absolute;
+top:229px;
+max-width:98.7%;
+height: 415px;
+background: rgba(255, 255, 255, 0.92);
+margin: 0px 0px 0px 0px;
+}
+
+div#baixo
+{
+position: fixed;
+background: black;
+width: 100%;
+height: 43px;
+top:418px;
+left: 0px;
+
+}
+
+
+
+
+div#home
+{
+position: fixed;
+background: black;
+width: 70px;
+height: 42px;
+top: 418px;
+left: 120px;
+}
+div#home:hover
+{
+background:  #6a6565;
+border:solid 1px white;
+}
+img#home
+{
+position: fixed;
+width: 45px;
+height: 34px;
+top: 422px;
+left: 135px;
+}
+
+
+
+div#fdetalhe
+{
+background: #696565; 
+position: absolute;
+top:2px;
+width: 38px;
+height:38px;
+left: 6px;
+border:solid 1px black;
+position: fixed;
+border-radius: 40px
+}
+
+div#fdetalhe:hover
+{
+background:black; 
+position: absolute;
+border:solid 1px #696565;
+position: fixed;
+border-radius: 40px
+}
+
+div#hdetalhe
+{
+background: rgba(245, 0, 19, 0.72);
+position: absolute;
+top:187px;
+width: 99.4%;
+height:40px;
+left: 0%;
+padding: 1px;
+}
+
+h2#titulo
+{
+font-family: Arial,sans-serif;
+font-size: 28px;
+color: white;
+position: absolute;
+top: -25px;
+height:29px; 
+width: 100px;
+left: 130px;
+padding: 7px;
+}
+
+h2#ponto
+{
+font-family: Arial,sans-serif;
+font-size: 28px;
+color: white;
+position: absolute;
+top: -25px;
+height:29px; 
+width: 240px;
+left: 40px;
+padding: 7px;
+}
+
+
+img#volta
+{
+
+position: absolute;
+top: 7px;
+width: 15px;
+left: 16px;
+position: fixed;
+}
+
+/*slider--------------------------------------*/
+
+body{
+	margin:auto;
+	text-align:center;
+	}
+
+
+
+nav#pi {
+	  margin-top:100px;
+	          left:0px;
+	          right:px;
+           background:;
+          width: 400px;
+       position: fixed;
+       display: inline;
+    position: absolute;
+            
+   
+  }
+nav#bi {
+      margin-top:-40px;
+	          left:0px;
+	         right:0px;
+           background:;
+          width: 300px;
+       position: fixed;
+       display: inline;
+    position: absolute;
+
+}
+  
+
+  nav li {
+       display: inline;
+  padding-right:100rem;
+   
+  }
+
+ a#link:hover
+{
+background: #8d8d8d;
+}
+  
+  nav a#link {
+      top: 1px;
+      background:rgba(25, 141, 141, 0.4);
+   border-radius: 30px;
+            color:#FFF;
+           width: 50px;
+           height:50px;
+     margin-left:312px;
+     font-weight: bold;
+  text-decoration:none;
+    position: absolute;
+border:solid white 1px; 
+  }
+
+ a#link:hover
+{
+   background: #8d8d8d;
+}
+
+  nav a#linkk {
+    top: 1px;
+    background:rgba(25, 141, 141, 0.4);
+           width: 50px;
+           height:50px;
+    border-radius:30px;
+            color:#FFF;
+     margin-left:-33px;
+     font-weight: bold;
+  text-decoration:none;
+    position: absolute;
+border:solid white 1px;  
+  }
+
+ a#linkk:hover
+{
+   background: #8d8d8d;
+}
+  
+ nav a#linkkk {
+        top: 1px;
+      background:rgba(25, 141, 141, 0.4);
+           width: 50px;
+           height:50px;
+    border-radius:60px;
+            color:#FFF;
+      margin-left:65px;
+     font-weight: bold;
+  text-decoration:none;
+    position: absolute;
+border:solid white 1px; 
+  }
+
+ a#linkkk:hover
+{
+   background: #8d8d8d;
+}
+   nav a#linkkkk {
+              top: 1px;
+        background:rgba(25, 141, 141, 0.4);
+           width: 50px;
+           height:50px;
+    border-radius:30px;
+            color:#FFF;
+      margin-left:65px;
+     font-weight: bold;
+  text-decoration:none;
+    position: absolute;
+border:solid white 1px;   
+  }
+
+ a#linkkkk:hover
+{
+   background: #8d8d8d;
+}
+  
+  nav a#linkkkkk {
+              top: 1px;
+       background:rgba(25, 141, 141, 0.4);
+           width: 50px;
+           height:50px;
+    border-radius:40px;
+            color:#FFF;
+     margin-left:312px;
+     font-weight: bold;
+  text-decoration:none;
+    position: absolute;
+border:solid white 1px;   
+  }
+
+ a#linkkkkk:hover
+{
+   background: #8d8d8d;
+}
+
+  nav a#linkkkkkk {
+              top: 1px;
+       background:rgba(25, 141, 141, 0.4);
+           width: 50px;
+           height:50px;
+   border-radius: 30px;
+            color:#FFF;
+     margin-left:212px;
+     font-weight: bold;
+  text-decoration:none;
+    position: absolute;
+border:solid white 1px;
+}
+
+ a#linkkkkkk:hover
+{
+   background: #8d8d8d;
+}
+  
+
+ .slideshow {
+           margin:auto;
+	 padding-top:120px;
+       position: fixed;
+          height: 97px;
+           width: 100%;
+   	  overflow: hidden; 
+  }
+ .target {
+    position: absolute;
+            top: -20px;
+            right:100%;
+         height: 333px;
+          width: 411px;
+ }
+  .target:target {
+	       left:-90px;
+ }
+
+img#img
+{
+
+        width: 370.5px;
+         height: 260px;
+              left:0px;
+}
+section#painel
+{
+    position: absolute;
+     background: black;
+           width: 40px;
+           height:40px;
+            z-index: 1;
+             top: 23px;
+}
+
+img#next
+{
+          width: 47px;
+         height: 47px;
+     margin-left:-5px;
+     margin-top: 1px;
+}
+img#next-p
+{
+          width: 47px;
+         height: 47px;
+      margin-left:4px;
+      margin-top: 1px;
+}
+br
+{
+position: absolute;
+left: 3px;
+}
