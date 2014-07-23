@@ -46,7 +46,7 @@
     <div id="btnsobre" class="menu-item" data-categoria="sobre" data-title="Sobre Cabrália">
       <img id="btn-sobre" src="images/cabraliaIcon.png">
     </div>
-    <div id="btnpontosturisticos" class="menu-item" data-categoria="pontos/" data-title="Pontos">
+    <div id="btnpontosturisticos" class="menu-item" data-categoria="pontos/" data-title="Pontos Turísticos">
       <img id="btn-pontosturisticos" src="images/puntosTuristicos@2x.png">
     </div>
     <div id="btnhospedagem" class="menu-item" data-categoria="hosp/" data-title="Hospedagens">
@@ -58,7 +58,7 @@
     <div id="btntransportes" class="menu-item" data-categoria="transp/" data-title="Transportes">
       <img id="btn-transportes" src="images/transporte@2x.png">
     </div>
-    <div id="btnutilidadepublica" class="menu-item" data-categoria="util/" data-title="Utiidade Pública">
+    <div id="btnutilidadepublica" class="menu-item" data-categoria="util/" data-title="Utilidade Pública">
       <img id="btn-utilidadepublica" src="images/hospital@2x.png">
     </div>
     <h3 id="txponto"> Pontos</h3>
@@ -74,8 +74,7 @@
   <!-- criando o menu principal -->
   <section id="menu-principal" role="region" data-position="right">
     <header class="fixed">
-      <h1>Hayô Tour <em>Beta</em></h1>
-      <a id="btn-buttons-back" class="go-back" href="#">
+        <a id="btn-buttons-back" class="go-back" href="#">
         <span class="icon icon-back">back</span>
       </a>
     </header>
@@ -87,7 +86,6 @@
     </article>
   </section>
   <!-- Final de menu -->
-
 
   <!--- Criando lista de itens -->
   <section role="region" id="list-item-page" data-position="right">
@@ -106,35 +104,116 @@
   </section>
   <!-- Final da lista de itens -->
 
-  <!-- Templates -->
+  <!-- criando tela de detalhes -->
+  <section role="region" id="detalhe-item-page" data-position="right">
+    <header class="fixed">
+      <a id="btn-buttons-back" class="go-back" href="#">
+        <span class="icon icon-back">back</span>
+      </a>
+      <h1 id="item-list-title"></h1>
+    </header>
+     <div id="detalhe-list">
+     </div> 
+  </section>
+
+
+  <!-- Final tela de detalhes -->
+
+  <!-- Templates
+                 Template do Menu principal -->
   <script id="menu-list-template" type="text/x-handlebars-template">
     {{#each pontos}}
     <li class = "menu-item" data-categoria = "{{ categoria }}"
     data-title = "{{ nome }}" >
       <a id = "btn-{{ categoria }}"
     href = "#" >
-      <p > {{nome}} </p>
+      <p> {{nome}} </p>
           </a >
       </li>
       {{/each }}
   </script>
 
+  <!-- Template da listagem de intens do DB -->
   <script id="item-list-template" type="text/x-handlebars-template">
     {{#each itens}}
-    <li class = "item-list" data-id = "{{ _id }}" >
+    <li class = "item-list" data-id = "{{ _id }}" data-colection = "{{ categoria }}">
       <aside class = "pack-end" >
       <img alt = "{{ name }}" src = "{{ imagens }}" >
       </aside>
-          <a href="#">
+          <a id = "btn-{{ _id }}"
+          href="#" >
               <p>{{ nome }}</p >
-      <p > {{telefone}} </p>
-          </a>
+      <p> {{telefone}} </p>
+          </a >
       </li>
       {{/each}}
   </script>
 
+  <!-- template da tela de detalhes -->
+  <script id="detalhe-tela-template" type="text/x-handlebars-template">
+    {{# each detalhe}}
+     
+         <Section class="slideshow">
+            <img id="detalhe" alt = "{{ name }}" src = "{{ imagens }}">
+            <nav id="bi">
+               <ul>
+               <li>
+                  <a id="segundo-link" href="#img01">
+                     <img id="next" src="images/arrow.ico">
+                  </a>
+                  <a id="sexto-link" href="#img03">
+                     <img id="next-p" src="images/arrow-next.ico">
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <article id="img01" class="target">
+            <nav id="pi">
+               <ul>
+                  <li>
+                     <a id="primeiro-link" href="#img02">
+                        <img id="next-p" src="images/arrow-next.ico">
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+            <figure>
+               <img id="detalhe1" alt = "{{ name }}" src = "{{ imagensD1 }}">
+            </figure>
+         </article>
+         <article id="img02" class="target">
+            <nav id="pi">
+               <ul>
+                  <li>
+                     <a id="terceiro-link" href="#img01">
+                        <img id="next" src="images/arrow.ico">
+                     </a>
+                     <a id="quinto-link" href="#img03">
+                        <img id="next-p" src="images/arrow-next.ico" />
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+            <figure>
+               <img id="detalhe2" alt = "{{ name }}" src = "{{ imagensD2 }}">
+            </figure>
+         </article>
+         
+        </Section>
+      
+      <div id="texto">
+          {{ descricao }}
+      </div>
+      <a href="#">
+          <p> {{ telefone }} </p>
+          <p> {{ endereco }} </p>
+      </a>
+     
+    {{/each}}
+  </script>
+
+  
+  <!-- Fim dos templetes -->
+
   <!-- chamadas para os JavaScrip -->
   <script defer src="js/app.js"></script>
-</body>
-
-</html>

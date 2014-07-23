@@ -1,20 +1,10 @@
 //Url padrão da nossa api
-//var apiUrl = 'http://cabralia.herokuapp.com/api/item/';
-//var apiUrl = 'http://hayoapi.herokuapp.com/';
+
 var apiUrl ='http://hayoapi.herokuapp.com/';
 //Funções da aplicação
 var app = {
   init: function () {
-    // chama a tela de listagem, fazendo a transição 
-    //alert("Chamou ou INIT")
-
-    document.getElementById('menu-principal').className = 'current';
-    document.querySelector('[data-position="current"]').className = 'right';
-
-
-
-    //alert("Chamou a transição de tela")
-
+        
     //iniciamos o loader
     helpers.loader.show();
 
@@ -40,6 +30,7 @@ var helpers = {
   getTemplate: function (template, data, destination) {
     var source = document.getElementById(template).innerHTML,
       temp = Handlebars.compile(source);
+   
 
     var content = temp(data),
       dest = document.getElementById(destination);
@@ -53,6 +44,14 @@ var helpers = {
       item.addEventListener('click', helpers.goTo);
     }
 
+    //Adicionamos click nos itens do menu
+    var menuLinks = document.querySelectorAll('.item-list');
+    for (var i = 0, l = menuLinks.length; i < l; i++) {
+      var item = menuLinks[i];
+      item.addEventListener('click', helpers.goDetalhe);
+    }
+  
+
     //Adicionamos click nos botões voltar
     var back = document.querySelectorAll('.go-back');
     for (var i = 0, l = back.length; i < l; i++) {
@@ -61,11 +60,17 @@ var helpers = {
     }
 
   },
+
+  // chama a tela de listagem da OPÇÃO selecionado
   goTo: function (e) {
     var categoria = this.getAttribute('data-categoria'),
-      title = this.getAttribute('data-title');
+    title = this.getAttribute('data-title');
 
     //Inserimos o novo titulo na pagina de listas
+    // chama a tela de listagem, fazendo a transição 
+    document.getElementById('list-item-page').className = 'current';
+    document.querySelector('[data-position="current"]').className = 'left';
+
     helpers.setTitle(title);
 
     //Mostramos o loader
@@ -78,8 +83,7 @@ var helpers = {
           itens: response
         }, 'item-list');
 
-        document.getElementById('list-item-page').className = 'current';
-        document.querySelector('[data-position="current"]').className = 'left';
+        
       })
       .error(function (message) {
         //tratamos o erro
@@ -89,6 +93,47 @@ var helpers = {
         helpers.loader.hide();
       });
   },
+
+  goDetalhe: function (e) {
+    var categoria = this.getAttribute('data-categoria'),
+    title = this.getAttribute('data-title');
+
+    var colection = this.getAttribute('data-colection');
+    var id = this.getAttribute('data-id');
+    
+
+
+    //Inserimos o novo titulo na pagina de listas
+    // chama a tela de listagem, fazendo a transição 
+    document.getElementById('detalhe-item-page').className = 'current';
+    document.querySelector('[data-position="current"]').className = 'left';
+
+    helpers.setTitle(title);
+
+    //Mostramos o loader
+    helpers.loader.show();
+
+    //Fazemos o get da url de itens passando a categoria
+    qwest.get(apiUrl + colection)
+      .success(function (response) {
+         helpers.getTemplate('detalhe-tela-template', {
+          detalhe:  response 
+        }, 'detalhe-list');
+
+        
+      })
+      .error(function (message) {
+        //tratamos o erro
+      })
+      .complete(function (message) {
+        //escondemos o loader
+        helpers.loader.hide();
+      });
+  },
+
+  // chama a tela de Detalhe do ITEM selecionado
+  
+
   goBack: function () {
     document.getElementById('list-item-page').className = 'right';
     document.querySelector('[data-position="current"]').className = 'current';

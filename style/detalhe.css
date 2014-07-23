@@ -170,13 +170,8 @@ nav#bi {
   padding-right:100rem;
    
   }
-
- a#link:hover
-{
-background: #8d8d8d;
-}
   
-  nav a#link {
+  nav a#primeiro-link {
       top: 1px;
       background:rgba(25, 141, 141, 0.4);
    border-radius: 30px;
@@ -190,12 +185,12 @@ background: #8d8d8d;
 border:solid white 1px; 
   }
 
- a#link:hover
+ a#primeirolink:hover
 {
    background: #8d8d8d;
 }
 
-  nav a#linkk {
+  nav a#segundo-linkk {
     top: 1px;
     background:rgba(25, 141, 141, 0.4);
            width: 50px;
@@ -209,12 +204,12 @@ border:solid white 1px;
 border:solid white 1px;  
   }
 
- a#linkk:hover
+ a#segundo-linkk:hover
 {
    background: #8d8d8d;
 }
   
- nav a#linkkk {
+ nav a#terceirolink {
         top: 1px;
       background:rgba(25, 141, 141, 0.4);
            width: 50px;
@@ -228,11 +223,11 @@ border:solid white 1px;
 border:solid white 1px; 
   }
 
- a#linkkk:hover
+ a#terceiro-link:hover
 {
    background: #8d8d8d;
 }
-   nav a#linkkkk {
+   nav a#quarto-link {
               top: 1px;
         background:rgba(25, 141, 141, 0.4);
            width: 50px;
@@ -246,12 +241,12 @@ border:solid white 1px;
 border:solid white 1px;   
   }
 
- a#linkkkk:hover
+ a#quarto-link:hover
 {
    background: #8d8d8d;
 }
   
-  nav a#linkkkkk {
+  nav a#quinto-link {
               top: 1px;
        background:rgba(25, 141, 141, 0.4);
            width: 50px;
@@ -265,12 +260,12 @@ border:solid white 1px;
 border:solid white 1px;   
   }
 
- a#linkkkkk:hover
+ a#quinto-link:hover
 {
    background: #8d8d8d;
 }
 
-  nav a#linkkkkkk {
+  nav a#sexto-link {
               top: 1px;
        background:rgba(25, 141, 141, 0.4);
            width: 50px;
@@ -284,7 +279,7 @@ border:solid white 1px;
 border:solid white 1px;
 }
 
- a#linkkkkkk:hover
+ a#sexto-link:hover
 {
    background: #8d8d8d;
 }
