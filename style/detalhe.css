@@ -17,15 +17,34 @@ height: 50%;
 left: 0px;
 }
 
+
 img#telef
 {
 	width: 35px;
 	height: 35px;
 }
+/*------------sobre----------------*/
+img#sobre
+{
+	width: 111%;
+	height:220px;
+	margin-left:-15px;
 
+}
+
+/*------------fim do css sobre----------------*/
 div#texto
 {
+  width: ;
+  height: 230px;
   border-bottom:solid 1px gray;
+  padding-bottom: 7px;
+}
+
+div#contato
+{
+  width: ;
+  height: 107px;
   padding-bottom: 7px;
 }
 
@@ -48,10 +67,10 @@ padding: 2px;
 font-family: Arial,Fira San;
 font-size: 18px;
 position:absolute;
-top:40px;
-width: 93%;
-height: 300px;
-background: white;
+top:32px;
+width: 98%;
+height: 350px;
+background:white;
 margin: 0px 0px 0px 0px;
 }
 
@@ -93,7 +112,7 @@ div#hdetalhe
 {
 background: rgba(245, 0, 19, 0.72);
 position: absolute;
-top:168px;
+top:161px;
 width: 99.4%;
 height:30px;
 left: 0%;
