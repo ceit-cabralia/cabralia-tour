@@ -1,15 +1,12 @@
 <! DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <!-- deixando o App responsivo -->
   <meta name="viewport" content="width=device-width, user-scalable=no" />
-
   <!-- Additional markup to make Building Blocks kind of cross browser -->
-  <link rel="stylesheet" href="cross_browser.css">
+  <<link rel="stylesheet" href="cross_browser.css">
   <link rel="stylesheet" href="style/cross_browser.css">
-
   <!-- importando componentes do Building blocks -->
   <link rel="stylesheet" href="style/buttons.css">
   <link rel="stylesheet" href="style/confirm.css">
@@ -17,30 +14,22 @@
   <link rel="stylesheet" href="style/drawer.css">
   <link rel="stylesheet" href="style/lists.css">
   <link rel="stylesheet" href="style/scrolling.css">
-  <link rel="stylesheet" href="style/icons.css">
-
-
+  <link rel="stylesheet" href="style/icons.css"> 
   <!-- CSS criados pelo Almir Stark -->
-  <ink rel="stylesheet" href="style/detalhe.css">
+    <link rel="stylesheet" href="style/detalhe.css">
     <link rel="stylesheet" href="style/Haio.css">
     <link rel="stylesheet" href="style/liststyle.css">
     <!--<link rel="stylesheet" href="style/mobile.css">-->
-
     <!-- Transitions -->
     <link rel="stylesheet" href="transitions.css">
-
     <!-- Util CSS: some extra tricks -->
     <link rel="stylesheet" href="util.css">
-
     <title>Hayô Tour</title>
-
     <script src="js/libs/handlebars-v1.3.0.js"></script>
     <script src="js/libs/qwest-0.5.5.min.js"></script>
 </head>
-
 <body role="application">
   <div id="loader" class="loader hide"></div>
-
   <!-- SESSÃO Menu Principal -->
   <section style="background-image: url(images/fondoMenuPrincipal.png)" id="menu-principal" role="region" data-position="current">
     <div id="btnsobre" class="menu-item" data-categoria="sobre" data-title="Sobre Cabrália">
@@ -70,7 +59,6 @@
     <h3 id="txservicos">Serviços</h3>
   </section>
   <!-- final do menu principal -->
-
   <!-- criando o menu principal -->
   <section id="menu-principal" role="region" data-position="right">
     <header class="fixed">
@@ -78,7 +66,6 @@
         <span class="icon icon-back">back</span>
       </a>
     </header>
-
     <article class="scrollable header">
       <div data-type="list">
         <ul id="menu-list"></ul>
@@ -86,7 +73,6 @@
     </article>
   </section>
   <!-- Final de menu -->
-
   <!--- Criando lista de itens -->
   <section role="region" id="list-item-page" data-position="right">
     <header class="fixed">
@@ -95,7 +81,6 @@
       </a>
       <h1 id="item-list-title"></h1>
     </header>
-
     <article class="content scrollable header">
       <section data-type="list">
         <ul id="item-list"></ul>
@@ -103,22 +88,63 @@
     </article>
   </section>
   <!-- Final da lista de itens -->
-
   <!-- criando tela de detalhes -->
   <section role="region" id="detalhe-item-page" data-position="right">
     <header class="fixed">
-      <a id="btn-buttons-back" class="go-back" href="#">
+      <a id="btn-buttons-back" class="go-back_D" href="#">
         <span class="icon icon-back">back</span>
       </a>
       <h1 id="item-list-title"></h1>
     </header>
+    <article class="content scrollable header">
      <div id="detalhe-list">
      </div> 
+   </article>
   </section>
-
-
   <!-- Final tela de detalhes -->
-
+  <!-- criando tela de informações sobre Cabrália -->
+  <section role="region" id="sobre-cabralia-page" data-position="right">
+    <header class="fixed">
+      <a id="btn-buttons-back" class="go-back_S" href="#">
+        <span class="icon icon-back">back</span>
+      </a>
+      <h1>Sobre Cabrália</h1>
+    </header>
+    <article class="content scrollable header">
+      <div id="detalhe-list">
+          
+      <img id="detalhe" src ="images/cabralia01.jpg">
+    <form>
+        
+        <div id="texto"> </br></br></br></br></br></br></br></br></br></br></br></br></br>
+        <p>Santa Cruz Cabrália, município localizado na Costa do Descobrimento, extremo Sul da Bahia.  Local da celebração da 1º Missa e cenário de diversas áreas de proteção ambiental. Com população de 27.854 habitantes.</p></br>
+        <p>Aqui, onde o Rio João de Tiba beija o mar, você vai encontrar alegria e muita beleza, em cada canto uma história diferente.</p></br> 
+        <p>Cabrália dispõe de bons hotéis, pousadas, restaurantes, agências bancárias, área de camping e agências de turismo, responsáveis pela organização dos famosos passeios de escuna.
+        </p>  
+        </div>
+      </br>
+        <img id="sobre" src = "images/cabralia02.jpg">
+        <h2>História</h2>
+        <div id="texto"> 
+        <p>Santa Cruz Cabrália é uma das cidades históricas do estado da Bahia, por nela terem sido realizadas a 1ª (Domingo de Páscoa) e a 2ª (de Posse) Missas no Brasil, ambas celebradas por Frei Henrique de Coimbra8 , capelão da armada de Pedro Álvares Cabral, em 26 de abril e 1 de maio de 1500, respectivamente, a primeira delas na extremidade sul da Baía Cabrália, mais precisamente no Ilhéu da Coroa Vermelha e a segunda na foz do Rio Mutari.</p></br>
+<p>Santa Cruz Cabrália é uma cidade construída em dois planos, seguindo a tradição portuguesa.</p></br>
+<p>Na parte alta da cidade, encontram se a Igreja de Nossa Senhora da Conceição, construída no século XVII, a Casa da Câmara e Cadeia, que abrigou a primeira Intendência do Brasil, prédio do século XVIII, e ainda as ruínas de um colégio jesuíta do século XVI.
+        </P>
+        </div> 
+        <h2>Localização</h2>
+        <img id="sobre" alt = "mapa1" src = "images/mapa01.jpg">
+        <p>na Bahia
+        </p> </br>
+        <img id="sobre" alt = "mapa02" src = "images/mapa02.jpg">
+        <p>no Brasil
+     
+      
+    </div> 
+  </form>
+    </article>
+  
+  </section>
+  <!-- Final tela de detalhes -->
   <!-- Templates
                  Template do Menu principal -->
   <script id="menu-list-template" type="text/x-handlebars-template">
@@ -132,7 +158,6 @@
       </li>
       {{/each }}
   </script>
-
   <!-- Template da listagem de intens do DB -->
   <script id="item-list-template" type="text/x-handlebars-template">
     {{#each itens}}
@@ -148,72 +173,31 @@
       </li>
       {{/each}}
   </script>
-
   <!-- template da tela de detalhes -->
   <script id="detalhe-tela-template" type="text/x-handlebars-template">
     {{# each detalhe}}
-     
-         <Section class="slideshow">
-            <img id="detalhe" alt = "{{ name }}" src = "{{ imagens }}">
-            <nav id="bi">
-               <ul>
-               <li>
-                  <a id="segundo-link" href="#img01">
-                     <img id="next" src="images/arrow.ico">
-                  </a>
-                  <a id="sexto-link" href="#img03">
-                     <img id="next-p" src="images/arrow-next.ico">
-                  </a>
-               </li>
-            </ul>
-         </nav>
-         <article id="img01" class="target">
-            <nav id="pi">
-               <ul>
-                  <li>
-                     <a id="primeiro-link" href="#img02">
-                        <img id="next-p" src="images/arrow-next.ico">
-                     </a>
-                  </li>
-               </ul>
-            </nav>
-            <figure>
-               <img id="detalhe1" alt = "{{ name }}" src = "{{ imagensD1 }}">
-            </figure>
-         </article>
-         <article id="img02" class="target">
-            <nav id="pi">
-               <ul>
-                  <li>
-                     <a id="terceiro-link" href="#img01">
-                        <img id="next" src="images/arrow.ico">
-                     </a>
-                     <a id="quinto-link" href="#img03">
-                        <img id="next-p" src="images/arrow-next.ico" />
-                     </a>
-                  </li>
-               </ul>
-            </nav>
-            <figure>
-               <img id="detalhe2" alt = "{{ name }}" src = "{{ imagensD2 }}">
-            </figure>
-         </article>
-         
-        </Section>
-      
-      <div id="texto">
-          {{ descricao }}
-      </div>
-      <a href="#">
-          <p> {{ telefone }} </p>
-          <p> {{ endereco }} </p>
-      </a>
-     
+      <div>
+      <img id="detalhe" alt = "{{ name }}" src = "{{ imagens }}">
+       <div id="hdetalhe">     
+          <h2 id="titulo">{{ nome }}</h2>
+          <form id="texto">
+          <div id="texto">
+             {{ descricao }}
+        </div>
+        {{#if telefone}}
+        <div id="texto">  
+        <img id="telef" data-tel={{ telefone }} src="images/fone.png"/> {{ telefone }}  </li> </br>
+         {{/if}}
+        <ul>
+           </br> 
+          <li>Endereço: </br>
+          {{ endereco }} </li>
+       </ul>
+       </div>
+        </form>
     {{/each}}
   </script>
-
   
   <!-- Fim dos templetes -->
-
   <!-- chamadas para os JavaScrip -->
   <script defer src="js/app.js"></script>
