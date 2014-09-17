@@ -1,6 +1,6 @@
 ///Url padrão da nossa api
 
-var apiUrl ='http://hayoapi.herokuapp.com/';
+var apiUrl ='localhost/3000';
 //Funções da aplicação
 var app = {
   init: function () {
