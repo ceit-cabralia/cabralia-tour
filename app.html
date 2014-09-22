@@ -2,12 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- deixando o App responsivo -->
+  
   <meta name="viewport" content="width=device-width, user-scalable=no" />
-  <!-- Additional markup to make Building Blocks kind of cross browser -->
   <link rel="stylesheet" href="cross_browser.css">
   <link rel="stylesheet" href="style/cross_browser.css">
-  <!-- importando componentes do Building blocks -->
   <link rel="stylesheet" href="style/buttons.css">
   <link rel="stylesheet" href="style/confirm.css">
   <link rel="stylesheet" href="style/headers.css">
@@ -15,22 +13,18 @@
   <link rel="stylesheet" href="style/lists.css">
   <link rel="stylesheet" href="style/scrolling.css">
   <link rel="stylesheet" href="style/icons.css"> 
-  <!-- CSS criados pelo Almir Stark -->
-    <link rel="stylesheet" href="style/detalhe.css">
-    <link rel="stylesheet" href="style/Haio.css">
-    <link rel="stylesheet" href="style/liststyle.css">
-    <!--<link rel="stylesheet" href="style/mobile.css">-->
-    <!-- Transitions -->
-    <link rel="stylesheet" href="transitions.css">
-    <!-- Util CSS: some extra tricks -->
-    <link rel="stylesheet" href="util.css">
-    <title>Hayô Tour</title>
-    <script src="js/libs/handlebars-v1.3.0.js"></script>
-    <script src="js/libs/qwest-0.5.5.min.js"></script>
+  <link rel="stylesheet" href="style/detalhe.css">
+  <link rel="stylesheet" href="style/Haio.css">
+  <link rel="stylesheet" href="style/liststyle.css">
+  <link rel="stylesheet" href="transitions.css">
+  <link rel="stylesheet" href="util.css">
+  <title>Hayô Tour</title>
+  <script src="js/libs/handlebars-v1.3.0.js"></script>
+  <script src="js/libs/qwest-0.5.5.min.js"></script>
 </head>
 <body role="application">
   <div id="loader" class="loader hide"></div>
-  <!-- SESSÃO Menu Principal -->
+  
   <section style="background-image: url(images/fondoMenuPrincipal.png)" id="menu-principal" role="region" data-position="current">
     <div id="btnsobre" class="menu-item" data-categoria="sobre" data-title="Sobre Cabrália">
       <img id="btn-sobre" src="images/cabraliaIcon.png">
@@ -58,8 +52,7 @@
     <h3 id="txrestaurante">Restaurantes</h3>
     <h3 id="txservicos">Serviços</h3>
   </section>
-  <!-- final do menu principal -->
-  <!-- criando o menu principal -->
+  
   <section id="menu-principal" role="region" data-position="right">
     <header class="fixed">
         <a id="btn-buttons-back" class="go-back" href="#">
@@ -72,8 +65,7 @@
       </div>
     </article>
   </section>
-  <!-- Final de menu -->
-  <!--- Criando lista de itens -->
+  
   <section role="region" id="list-item-page" data-position="right">
     <header class="fixed">
       <a id="btn-buttons-back" class="go-back" href="#">
@@ -87,8 +79,7 @@
       </section>
     </article>
   </section>
-  <!-- Final da lista de itens -->
-  <!-- criando tela de detalhes -->
+  
   <section role="region" id="detalhe-item-page" data-position="right">
     <header class="fixed">
       <a id="btn-buttons-back" class="go-back_D" href="#">
@@ -101,8 +92,7 @@
      </div> 
    </article>
   </section>
-  <!-- Final tela de detalhes -->
-  <!-- criando tela de informações sobre Cabrália -->
+  
   <section role="region" id="sobre-cabralia-page" data-position="right">
     <header class="fixed">
       <a id="btn-buttons-back" class="go-back_S" href="#">
@@ -143,9 +133,7 @@
     </article>
   
   </section>
-  <!-- Final tela de detalhes -->
-  <!-- Templates
-                 Template do Menu principal -->
+  
   <script id="menu-list-template" type="text/x-handlebars-template">
     {{#each pontos}}
     <li class = "menu-item" data-categoria = "{{ categoria }}"
@@ -157,7 +145,7 @@
       </li>
       {{/each }}
   </script>
-  <!-- Template da listagem de intens do DB -->
+  
   <script id="item-list-template" type="text/x-handlebars-template">
     {{#each itens}}
     <li class = "item-list" data-id = "{{ _id }}" data-colection = "{{ categoria }}">
@@ -172,7 +160,7 @@
       </li>
       {{/each}}
   </script>
-  <!-- template da tela de detalhes -->
+  
   <script id="detalhe-tela-template" type="text/x-handlebars-template">
     {{# each detalhe}}
       <div>
@@ -197,6 +185,5 @@
     {{/each}}
   </script>
   
-  <!-- Fim dos templetes -->
-  <!-- chamadas para os JavaScrip -->
+  
   <script defer src="js/app.js"></script>
